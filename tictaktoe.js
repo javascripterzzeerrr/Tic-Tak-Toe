@@ -3,8 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let tiles = document.querySelectorAll('.tictaktoe__tile');
     let announce = document.querySelector('.tictaktoe__announce');
     let queue = document.querySelector('.tictaktoe__queue');
-
-    console.log(announce);
+    let button = document.querySelector('.tictaktoe__reset button');
 
     let BOARD = [
         '', '', '',
@@ -91,10 +90,27 @@ window.addEventListener('DOMContentLoaded', () => {
     tiles.forEach((item, id) => {
        item.addEventListener('click', () => {
            actionUser(item, id);
-           console.log(BOARD);
        });
     });
 
+    button.addEventListener('click', resetBoard);
 
+    function resetBoard() {
+        BOARD = [
+            '', '', '',
+            '', '', '',
+            '', '', '',
+        ];
+
+        tiles.forEach(tile => {
+            tile.innerHTML = '';
+            tile.classList.remove('playerX', 'playerO');
+        });
+
+        isGameContinue = true;
+        playerNow = 'X';
+        queue.innerHTML = `<p>Player ${playerNow} <em class="queue">is walking now</em></p>`;
+        announce.innerHTML = "";
+    }
 
 });
