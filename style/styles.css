@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-color: #494848;
+    font-family: 'Itim', cursive;
+    color: #fff;
+}
+
+.container {
+    color: #fff;
+    text-align: center;
+}
+
+.tictaktoe__fields {
+    max-width: 600px;
+    max-height: 600px;
+    width: 400px;
+    height: 400px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tictaktoe__tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    border: 1px solid #fff;
+}
+
+.tictaktoe__title {}
+
+.tictaktoe__queue {
+    font-size: 24px;
+}
+
+.tictaktoe__announce {
+    display: block;
+    height: 150px;
+    color: #fff;
+    font-size: 55px;
+}
+
+.queue{
+    color: brown;
+}
+
+.playerX {
+    background-color: #1a9136;
+}
+
+.playerO {
+    background-color: #9d0a45;
+}
+
+.announce {
+    font-size: 36px;
+}
+
+.wins {
+    color: darkgreen;
+    font-size: 55px;
+}
